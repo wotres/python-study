@@ -14,3 +14,30 @@
     $ pyenv virtualenv <new_python_version> <new_env_name>
     $ pyenv activate <new_env_name>
     ```
+
+# 
+* 상황
+    * $pyenv activate <env_name> 수행시
+* 에러
+    * Failed to activate virtualenv.  
+    Perhaps pyenv-virtualenv has not been loaded into your shell properly.  
+    Please restart current shell and try again.
+* 원인
+    * 환경 변수가 잘못됨
+* 해결법
+    * .zshrc 환경 변수 추가
+    ```
+    $ export PYENV_ROOT="$HOME/.pyenv"
+    $ export PATH="$PYENV_ROOT/bin:$PATH"
+    $ eval "$(pyenv init --path)"
+    $ eval "$(pyenv init -)"
+    ```
+
+# 
+* 상황
+
+* 에러
+
+* 원인
+
+* 해결법
